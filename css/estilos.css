@@ -1,10 +1,10 @@
+
 /* =========================================
    CONFIGURACIÓN GENERAL
 ========================================= */
 * {
     box-sizing: border-box;
 }
-
 body {
     margin: 0;
     padding: 0;
@@ -12,11 +12,11 @@ body {
     background-color: #f4f6fa;
     color: #111b4d;
 }
-
 /* =========================================
-   CONTENEDOR PRINCIPAL
+   CONTENEDORES PRINCIPALES
 ========================================= */
-.login-container {
+.login-container,
+.principal-container {
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -25,29 +25,33 @@ body {
 }
 
 /* =========================================
-   TARJETA DE LOGIN
+   TARJETAS PRINCIPALES
 ========================================= */
-.login-card {
+.login-card,
+.principal-card {
     width: 100%;
     max-width: 420px;
     min-height: 650px;
     background-color: white;
     border-radius: 18px;
-    padding: 45px 35px 20px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
+}
+.login-card {
+    padding: 45px 35px 20px;
+}
+.principal-card {
+    padding: 25px 20px 0;
 }
 
 /* =========================================
    LOGO
 ========================================= */
-
 .logo-container {
     text-align: center;
     margin-bottom: 35px;
 }
-
 .logo-box {
     width: 48px;
     height: 48px;
@@ -61,14 +65,12 @@ body {
     color: #f5c400;
     font-size: 23px;
 }
-
 .brand-name {
     margin: 0;
     font-size: 20px;
     font-weight: 700;
     color: #071650;
 }
-
 .brand-subtitle {
     display: block;
     font-size: 7px;
@@ -84,14 +86,12 @@ body {
     text-align: center;
     margin-bottom: 25px;
 }
-
 .welcome-section h2 {
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 7px;
     color: #111b4d;
 }
-
 .welcome-section p {
     font-size: 11px;
     color: #858585;
@@ -99,28 +99,27 @@ body {
 }
 
 /* =========================================
-   CAMPOS DEL FORMULARIO
+   FORMULARIOS
 ========================================= */
 .form-group {
     margin-bottom: 17px;
 }
-
 .form-group label {
     display: block;
     font-size: 10px;
     color: #777;
     margin-bottom: 6px;
 }
-
 .form-control {
+    width: 100%;
     height: 40px;
     border: 1px solid #e3e3e3;
     border-radius: 7px;
     font-size: 11px;
     padding: 0 12px;
     color: #333;
+    outline: none;
 }
-
 .form-control:focus {
     border-color: #071650;
     box-shadow: 0 0 0 2px rgba(7, 22, 80, 0.08);
@@ -129,7 +128,9 @@ body {
 /* =========================================
    CONTRASEÑA
 ========================================= */
-.password-container {
+
+.password-container,
+.select-container {
     position: relative;
 }
 
@@ -137,11 +138,15 @@ body {
     padding-right: 40px;
 }
 
-.password-button {
+.password-button,
+.select-icon {
     position: absolute;
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.password-button {
     border: none;
     background: transparent;
     color: #7c8496;
@@ -149,54 +154,43 @@ body {
     font-size: 14px;
 }
 
+.select-container .form-control {
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 35px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.select-icon {
+    right: 12px;
+    color: #7c8496;
+    font-size: 11px;
+    pointer-events: none;
+}
+
 /* =========================================
-   RECUPERAR CONTRASEÑA
+   ENLACES
 ========================================= */
+
 .forgot-container {
     text-align: right;
     margin-top: -5px;
     margin-bottom: 18px;
 }
 
-.forgot-container a {
+.forgot-container a,
+.register-container a,
+.registro-login a {
     color: #071650;
+    font-weight: 600;
     text-decoration: none;
+}
+
+.forgot-container a {
     font-size: 10px;
-    font-weight: 600;
 }
 
-.forgot-container a:hover {
-    text-decoration: underline;
-}
-
-/* =========================================
-   BOTÓN INICIAR SESIÓN
-========================================= */
-.btn-login {
-    width: 100%;
-    height: 42px;
-    border: none;
-    border-radius: 6px;
-    background-color: #071650;
-    color: white;
-    font-size: 11px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.btn-login:hover {
-    background-color: #0b216e;
-}
-
-.btn-login:active {
-    transform: scale(0.98);
-}
-
-
-/* =========================================
-   REGISTRO
-========================================= */
 .register-container {
     text-align: center;
     margin-top: 28px;
@@ -205,50 +199,63 @@ body {
 }
 
 .register-container a {
-    color: #071650;
-    font-weight: 600;
-    text-decoration: none;
+    font-size: 10px;
 }
 
-.register-container a:hover {
+.forgot-container a:hover,
+.register-container a:hover,
+.registro-login a:hover {
     text-decoration: underline;
 }
 
 /* =========================================
-   NAVEGACIÓN INFERIOR
-   OCULTA EN COMPUTADOR
+   BOTONES GENERALES
 ========================================= */
-.bottom-navigation {
-    display: none;
-}
 
-/* =========================================
-   BOTONES DE NAVEGACIÓN
-========================================= */
-.bottom-navigation button {
+.btn-login,
+.modal-button,
+.product-primary-button {
+    width: 100%;
     border: none;
-    background: transparent;
-    color: #071650;
-    font-size: 13px;
+    background-color: #071650;
+    color: white;
+    font-weight: 600;
     cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-login:hover,
+.modal-button:hover,
+.product-primary-button:hover {
+    background-color: #0b216e;
+}
+
+.btn-login:active {
+    transform: scale(0.98);
+}
+
+.btn-login {
+    height: 42px;
+    border-radius: 6px;
+    font-size: 11px;
 }
 
 /* =========================================
-   REGISTRO DE USUARIO
+   REGISTRO
 ========================================= */
+
 .registro-card {
     min-height: 650px;
 }
 
-
-/* =========================================
-   ENCABEZADO DEL REGISTRO
-========================================= */
-
-.registro-header {
+.registro-header,
+.product-detail-header {
     display: flex;
     align-items: center;
     position: relative;
+}
+
+.registro-header {
     margin-bottom: 25px;
 }
 
@@ -261,11 +268,10 @@ body {
     margin: 0;
 }
 
-.back-button {
+.back-button,
+.product-back-button {
     position: absolute;
     left: 0;
-    width: 28px;
-    height: 28px;
     border-radius: 50%;
     background-color: #f4f6fa;
     color: #071650;
@@ -273,16 +279,19 @@ body {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    font-size: 12px;
 }
 
-.back-button:hover {
+.back-button:hover,
+.product-back-button:hover {
     background-color: #e9ecf3;
 }
 
-/* =========================================
-   TÍTULO DEL REGISTRO
-========================================= */
+.back-button {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+}
+
 .registro-title {
     margin-bottom: 18px;
 }
@@ -291,7 +300,7 @@ body {
     font-size: 16px;
     font-weight: 700;
     color: #111b4d;
-    margin-bottom: 3px;
+    margin: 0 0 3px;
 }
 
 .registro-title p {
@@ -300,52 +309,46 @@ body {
     margin: 0;
 }
 
-/* =========================================
-   SELECT / LISTA DE ROLES
-========================================= */
-.select-container {
-    position: relative;
-}
-
-.select-container .form-control {
-    appearance: none;
-    -webkit-appearance: none;
-    padding-right: 35px;
-    background-color: white;
-    cursor: pointer;
-}
-
-.select-icon {
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #7c8496;
-    font-size: 11px;
-    pointer-events: none;
-}
-
-/* =========================================
-   BOTÓN DE REGISTRO
-========================================= */
 .registro-button {
     margin-top: 2px;
 }
 
-/* =========================================
-   ENLACE DE LOGIN
-========================================= */
 .registro-login {
     margin-top: 18px;
 }
 
 /* =========================================
-   VENTANA EMERGENTE / MODAL
+   RECUPERACIÓN
 ========================================= */
+
+.recovery-card {
+    min-height: 560px;
+}
+
+.recovery-card .registro-header {
+    margin-bottom: 35px;
+}
+
+.recovery-card .registro-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.recovery-card .registro-title p {
+    line-height: 1.5;
+}
+
+.recovery-card .registro-login {
+    margin-top: 25px;
+}
+
+/* =========================================
+   MODAL
+========================================= */
+
 .modal-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(7, 22, 80, 0.35);
@@ -356,16 +359,10 @@ body {
     z-index: 9999;
 }
 
-/* =========================================
-   MODAL VISIBLE
-========================================= */
 .modal-overlay.show {
     display: flex;
 }
 
-/* =========================================
-   CAJA DEL MODAL
-========================================= */
 .modal-box {
     width: 100%;
     max-width: 320px;
@@ -377,26 +374,17 @@ body {
     animation: modalEntrada 0.2s ease;
 }
 
-/* =========================================
-   ANIMACIÓN DEL MODAL
-========================================= */
 @keyframes modalEntrada {
-
     from {
         opacity: 0;
         transform: scale(0.9);
     }
-
     to {
         opacity: 1;
         transform: scale(1);
     }
-
 }
 
-/* =========================================
-   ICONO DEL MODAL
-========================================= */
 .modal-icon {
     width: 50px;
     height: 50px;
@@ -410,189 +398,34 @@ body {
     font-size: 24px;
 }
 
-/* =========================================
-   TÍTULO DEL MODAL
-========================================= */
 .modal-box h2 {
     font-size: 18px;
     font-weight: 700;
     color: #111b4d;
-    margin-bottom: 8px;
+    margin: 0 0 8px;
 }
 
-/* =========================================
-   MENSAJE DEL MODAL
-========================================= */
 .modal-box p {
     font-size: 11px;
     color: #858585;
-    margin-bottom: 22px;
+    margin: 0 0 22px;
 }
 
-/* =========================================
-   BOTÓN DEL MODAL
-========================================= */
 .modal-button {
-    width: 100%;
     height: 40px;
-    border: none;
     border-radius: 6px;
-    background-color: #071650;
-    color: white;
     font-size: 11px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.2s;
 }
 
-.modal-button:hover {
-    background-color: #0b216e;
-}
-
-/* =========================================
-   MODAL DE ERROR
-========================================= */
 .modal-box.error .modal-icon {
     background-color: #fdecec;
     color: #dc3545;
 }
 
-.modal-box.error .modal-button {
-    background-color: #071650;
-}
-
 /* =========================================
-   RESPONSIVE - CELULARES
-========================================= */
-@media (max-width: 576px) {
-
-    body {
-        background-color: white;
-    }
-
-    .login-container {
-        padding: 0;
-        align-items: stretch;
-    }
-
-    .login-card {
-        min-height: 100vh;
-        max-width: none;
-        border-radius: 0;
-        box-shadow: none;
-        padding: 50px 25px 20px;
-    }
-
-    /* Mostrar navegación únicamente en celular */
-
-    .bottom-navigation {
-        display: flex;
-        justify-content: space-between;
-        padding: 20px 8px 0;
-        margin-top: auto;
-    }
-
-    /* =====================================
-       AJUSTES DEL REGISTRO EN CELULAR
-    ===================================== */
-    .registro-card {
-        min-height: 100vh;
-        padding-top: 18px;
-    }
-
-    .registro-header {
-        margin-bottom: 18px;
-    }
-
-    .registro-title {
-        margin-bottom: 16px;
-    }
-
-    .registro-title h2 {
-        font-size: 16px;
-    }
-
-    .registro-title p {
-        font-size: 9px;
-    }
-
-    .registro-card .form-group {
-        margin-bottom: 12px;
-    }
-
-    .registro-card .form-control {
-        height: 40px;
-    }
-
-    .registro-button {
-        margin-top: 2px;
-    }
-
-    .registro-login {
-        margin-top: 17px;
-    }
-
-    /* =====================================
-       MODAL EN CELULAR
-    ===================================== */
-    .modal-box {
-        max-width: 300px;
-        padding: 27px 22px 22px;
-    }
-
-}
-
-/* =========================================
-   PANTALLAS MUY PEQUEÑAS
+   DASHBOARD
 ========================================= */
 
-@media (max-width: 360px) {
-    .login-card {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .logo-container {
-        margin-bottom: 25px;
-    }
-
-    .welcome-section h2 {
-        font-size: 17px;
-    }
-
-}
-
-/* =========================================
-   DASHBOARD / INICIO
-========================================= */
-.principal-container {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-/* =========================================
-   TARJETA PRINCIPAL
-========================================= */
-.principal-card {
-    width: 100%;
-    max-width: 420px;
-    min-height: 650px;
-    background-color: white;
-    border-radius: 18px;
-    padding: 25px 20px 0;
-    box-shadow:
-        0 5px 25px rgba(0, 0, 0, 0.08);
-    display: flex;
-    flex-direction: column;
-
-}
-
-/* =========================================
-   ENCABEZADO DEL DASHBOARD
-========================================= */
 .dashboard-header {
     display: flex;
     align-items: center;
@@ -600,9 +433,6 @@ body {
     margin-bottom: 15px;
 }
 
-/* =========================================
-   INFORMACIÓN DEL USUARIO
-========================================= */
 .user-info {
     display: flex;
     align-items: center;
@@ -636,8 +466,9 @@ body {
 }
 
 /* =========================================
-   BOTÓN DE NOTIFICACIONES
+   NOTIFICACIONES
 ========================================= */
+
 .notification-button {
     position: relative;
     width: 30px;
@@ -665,25 +496,34 @@ body {
 }
 
 /* =========================================
-   ALERTA DE STOCK
+   ALERTAS DE STOCK
 ========================================= */
-.stock-alert {
+
+.stock-alert,
+.product-stock-alert {
     width: 100%;
-    min-height: 45px;
-    padding: 7px 10px;
     border: 1px solid #f5c400;
     border-radius: 7px;
     background-color: #fffbea;
     display: flex;
     align-items: center;
+}
+
+.stock-alert {
+    min-height: 45px;
+    padding: 7px 10px;
     gap: 8px;
     margin-bottom: 20px;
 }
 
-.stock-alert-icon {
+.stock-alert-icon,
+.product-stock-alert-icon {
     color: #071650;
-    font-size: 20px;
     flex-shrink: 0;
+}
+
+.stock-alert-icon {
+    font-size: 20px;
 }
 
 .stock-alert p {
@@ -693,13 +533,15 @@ body {
     color: #111b4d;
 }
 
-.stock-alert strong {
+.stock-alert strong,
+.product-stock-alert strong {
     font-weight: 700;
 }
 
 /* =========================================
    TARJETAS DE RESUMEN
 ========================================= */
+
 .summary-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -713,8 +555,7 @@ body {
     border: 1px solid #e5e7ec;
     border-radius: 8px;
     background-color: white;
-    box-shadow:
-        0 2px 7px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.03);
 }
 
 .summary-card-header {
@@ -739,7 +580,7 @@ body {
     justify-content: center;
     background-color: #f4f6fa;
     color: #071650;
-    font-size: 8px;
+    font-size: 20px;
 }
 
 .summary-number {
@@ -749,9 +590,6 @@ body {
     color: #111b4d;
 }
 
-/* =========================================
-   TARJETA DE STOCK BAJO
-========================================= */
 .warning-card {
     border-color: #f5c400;
 }
@@ -764,6 +602,7 @@ body {
 /* =========================================
    ACCIONES RÁPIDAS
 ========================================= */
+
 .quick-actions-section {
     margin-bottom: 15px;
 }
@@ -785,9 +624,6 @@ body {
     background-color: white;
 }
 
-/* =========================================
-   BOTONES DE ACCIONES
-========================================= */
 .quick-action {
     border: none;
     background-color: transparent;
@@ -822,8 +658,9 @@ body {
 }
 
 /* =========================================
-   NAVEGACIÓN DEL DASHBOARD
+   NAVEGACIÓN
 ========================================= */
+
 .dashboard-navigation {
     margin-top: auto;
     min-height: 55px;
@@ -870,219 +707,14 @@ body {
     justify-content: center;
 }
 
-/* =========================================
-   RESPONSIVE - CELULAR
-========================================= */
-@media (max-width: 576px) {
-    body {
-        background-color: #f4f6fa;
-    }
-
-    .principal-container {
-        min-height: 100vh;
-        padding: 0;
-        align-items: stretch;
-    }
-
-    .principal-card {
-        min-height: 100vh;
-        max-width: none;
-        border-radius: 0;
-        box-shadow: none;
-        padding:
-            18px 10px 0;
-    }
-
-    .dashboard-header {
-        margin-bottom: 14px;
-    }
-
-    .summary-grid {
-        gap: 7px;
-    }
-
-    .summary-card {
-        min-height: 72px;
-    }
-
-    .quick-actions {
-        padding: 9px 3px;
-    }
-
-}
-
-
-/* =========================================
-   PANTALLAS MUY PEQUEÑAS
-========================================= */
-@media (max-width: 360px) {
-
-    .principal-card {
-
-        padding-left: 8px;
-
-        padding-right: 8px;
-
-    }
-
-
-    .summary-card {
-
-        padding: 8px;
-
-    }
-
-
-    .quick-action {
-
-        font-size: 5.5px;
-
-    }
-
-}
-
-/* =========================================
-   SIDEBAR EN COMPUTADOR
-========================================= */
-
 .sidebar-brand {
     display: none;
-}
-
-@media (min-width: 577px) {
-
-    body {
-        background-color: #f4f6fa;
-    }
-
-    .principal-container {
-        min-height: 100vh;
-        padding: 0;
-        align-items: stretch;
-    }
-
-    .principal-card {
-        width: 100%;
-        max-width: none;
-        min-height: 100vh;
-        border-radius: 0;
-        box-shadow: none;
-        flex-direction: row;
-        padding: 0;
-        overflow: hidden;
-    }
-
-    .dashboard-main {
-        flex: 1;
-        padding: 35px 45px;
-        overflow-y: auto;
-    }
-
-    .summary-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 16px;
-    }
-
-    .dashboard-navigation {
-        order: -1;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: stretch;
-        width: 230px;
-        min-width: 230px;
-        height: auto;
-        min-height: 100vh;
-        margin-top: 0;
-        border-top: none;
-        background-color: #071650;
-        padding: 25px 0 20px;
-        gap: 4px;
-    }
-
-    .sidebar-brand {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 0 25px 22px;
-        margin-bottom: 12px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .sidebar-brand .logo-box {
-        width: 34px;
-        height: 34px;
-        font-size: 16px;
-    }
-
-    .sidebar-brand-name {
-        color: white;
-        font-size: 15px;
-        font-weight: 700;
-    }
-
-    .dashboard-nav-item {
-        flex-direction: row;
-        justify-content: flex-start;
-        gap: 12px;
-        height: auto;
-        padding: 13px 25px;
-        font-size: 12px;
-        color: #b8c0dd;
-    }
-
-    .dashboard-nav-item i {
-        font-size: 16px;
-    }
-
-    .dashboard-nav-item:hover {
-        color: white;
-        background-color: rgba(255, 255, 255, 0.06);
-    }
-
-    .dashboard-nav-item.active {
-        color: #f5c400;
-        background-color: rgba(245, 196, 0, 0.12);
-        border-right: 3px solid #f5c400;
-    }
-
-    .dashboard-nav-item.active i {
-        width: auto;
-        height: auto;
-        border-radius: 0;
-        background-color: transparent;
-        color: #f5c400;
-    }
-
-}
-
-.summary-card-header i {
-    font-size: 20px;
-}
-
-.recovery-card {
-    min-height: 560px;
-}
-
-.recovery-card .registro-header {
-    margin-bottom: 35px;
-}
-
-.recovery-card .registro-title {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.recovery-card .registro-title p {
-    line-height: 1.5;
-}
-
-.recovery-card .registro-login {
-    margin-top: 25px;
 }
 
 /* =========================================
    INVENTARIO
 ========================================= */
+
 .inventory-main {
     width: 100%;
     padding: 32px 35px;
@@ -1287,34 +919,307 @@ body {
 }
 
 /* =========================================
-   NAVEGACIÓN INFERIOR DEL DASHBOARD
+   DETALLE DEL PRODUCTO
 ========================================= */
+
+.product-detail-main {
+    width: 100%;
+    padding: 32px 35px;
+}
+
+.product-detail-header {
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.product-detail-header h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #111b4d;
+}
+
+.product-back-button {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+}
+
+.product-stock-alert {
+    min-height: 44px;
+    padding: 7px 10px;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.product-stock-alert-icon {
+    font-size: 15px;
+}
+
+.product-stock-alert p {
+    margin: 0;
+    font-size: 10px;
+    line-height: 1.3;
+    color: #111b4d;
+}
+
+.product-detail-card {
+    background-color: white;
+    border: 1px solid #e5e7ec;
+    border-radius: 9px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.product-detail-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.product-detail-top h2 {
+    margin: 0 0 3px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #111b4d;
+}
+
+.product-detail-top p {
+    margin: 0;
+    font-size: 8px;
+    color: #858585;
+}
+
+.product-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #edf0f4;
+    margin: 12px 0;
+}
+
+.product-stock-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.product-stock-section > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-stock-section span {
+    font-size: 6px;
+    font-weight: 600;
+    color: #858585;
+    margin-bottom: 2px;
+}
+
+.product-stock-section strong {
+    font-size: 20px;
+    line-height: 1;
+    color: #dc3545;
+}
+
+.product-stock-section small {
+    font-size: 8px;
+    color: #858585;
+    margin-top: 2px;
+}
+
+.product-minimum {
+    text-align: right;
+}
+
+.product-minimum strong {
+    font-size: 11px;
+    color: #111b4d;
+}
+
+.product-information {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.product-information-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.product-information-row span,
+.product-information-row strong {
+    font-size: 8px;
+}
+
+.product-information-row span {
+    color: #858585;
+}
+
+.product-information-row strong {
+    font-weight: 600;
+    color: #111b4d;
+    text-align: right;
+}
+
+.product-actions {
+    margin-top: 12px;
+}
+
+.product-primary-button {
+    height: 34px;
+    border-radius: 6px;
+    font-size: 9px;
+}
+
+.product-secondary-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.product-edit-button,
+.product-delete-button {
+    height: 28px;
+    border-radius: 5px;
+    font-size: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.product-edit-button {
+    border: 1px solid #071650;
+    background-color: white;
+    color: #071650;
+}
+
+.product-edit-button:hover {
+    background-color: #f4f6fa;
+}
+
+.product-delete-button {
+    border: 1px solid #e8aeb4;
+    background-color: #fff0f1;
+    color: #dc3545;
+}
+
+.product-delete-button:hover {
+    background-color: #fde2e4;
+}
+
+/* =========================================
+   NAVEGACIÓN MÓVIL
+========================================= */
+
+.bottom-navigation,
 .mobile-dashboard-navigation {
     display: none;
 }
 
 /* =========================================
-   INVENTARIO RESPONSIVE
+   RESPONSIVE - CELULAR
 ========================================= */
-@media(max-width:576px) {
 
+@media (max-width: 576px) {
+    body {
+        background-color: #f4f6fa;
+    }
+
+    .login-container,
     .principal-container {
         min-height: 100vh;
         padding: 0;
+        align-items: stretch;
+    }
+
+    .login-card,
+    .principal-card {
+        min-height: 100vh;
+        max-width: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .login-card {
+        padding: 50px 25px 20px;
     }
 
     .principal-card {
-        width: 100%;
-        min-height: 100vh;
-        border-radius: 0;
-        box-shadow: none;
         position: relative;
-        padding-bottom: 76px;
+        padding: 18px 10px 76px;
     }
 
-    .dashboard-main {
-        width: 100%;
+    /* =====================================
+       LOGIN / REGISTRO
+    ===================================== */
+
+    .bottom-navigation {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 8px 0;
+        margin-top: auto;
     }
+
+    .bottom-navigation button {
+        border: none;
+        background: transparent;
+        color: #071650;
+        font-size: 13px;
+        cursor: pointer;
+    }
+
+    .registro-card {
+        min-height: 100vh;
+        padding-top: 18px;
+    }
+
+    .registro-header {
+        margin-bottom: 18px;
+    }
+
+    .registro-title {
+        margin-bottom: 16px;
+    }
+
+    .registro-card .form-group {
+        margin-bottom: 12px;
+    }
+
+    .registro-card .form-control {
+        height: 40px;
+    }
+
+    .registro-login {
+        margin-top: 17px;
+    }
+
+    /* =====================================
+       DASHBOARD
+    ===================================== */
+
+    .dashboard-header {
+        margin-bottom: 14px;
+    }
+
+    .summary-grid {
+        gap: 7px;
+    }
+
+    .summary-card {
+        min-height: 72px;
+    }
+
+    .quick-actions {
+        padding: 9px 3px;
+    }
+
+    /* =====================================
+       INVENTARIO
+    ===================================== */
 
     .dashboard-navigation {
         display: none;
@@ -1397,6 +1302,122 @@ body {
         font-size: 9px;
     }
 
+    /* =====================================
+       DETALLE DEL PRODUCTO
+    ===================================== */
+
+    .product-detail-main {
+        padding: 10px 12px 15px;
+    }
+
+    .product-detail-header {
+        margin-bottom: 10px;
+    }
+
+    .product-detail-header h1 {
+        font-size: 11px;
+    }
+
+    .product-back-button {
+        width: 20px;
+        height: 20px;
+        font-size: 8px;
+    }
+
+    .product-stock-alert {
+        min-height: 34px;
+        padding: 5px 7px;
+        gap: 6px;
+        margin-bottom: 9px;
+        border-radius: 6px;
+    }
+
+    .product-stock-alert-icon {
+        font-size: 10px;
+    }
+
+    .product-stock-alert p {
+        font-size: 6px;
+    }
+
+    .product-detail-card {
+        padding: 10px;
+        border-radius: 7px;
+    }
+
+    .product-detail-top {
+        gap: 7px;
+    }
+
+    .product-detail-top h2 {
+        font-size: 10px;
+        margin-bottom: 2px;
+    }
+
+    .product-detail-top p {
+        font-size: 6px;
+    }
+
+    .product-detail-top .stock-status {
+        font-size: 5px;
+        padding: 2px 5px;
+    }
+
+    .product-divider {
+        margin: 8px 0;
+    }
+
+    .product-stock-section span {
+        font-size: 5px;
+    }
+
+    .product-stock-section strong {
+        font-size: 18px;
+    }
+
+    .product-stock-section small {
+        font-size: 6px;
+    }
+
+    .product-minimum strong {
+        font-size: 8px;
+    }
+
+    .product-information {
+        gap: 6px;
+    }
+
+    .product-information-row span,
+    .product-information-row strong {
+        font-size: 6px;
+    }
+
+    .product-actions {
+        margin-top: 8px;
+    }
+
+    .product-primary-button {
+        height: 25px;
+        font-size: 7px;
+        border-radius: 4px;
+    }
+
+    .product-secondary-actions {
+        gap: 4px;
+        margin-top: 4px;
+    }
+
+    .product-edit-button,
+    .product-delete-button {
+        height: 22px;
+        font-size: 6px;
+        border-radius: 4px;
+    }
+
+    /* =====================================
+       NAVEGACIÓN MÓVIL
+    ===================================== */
+
     .mobile-dashboard-navigation {
         position: fixed;
         bottom: 0;
@@ -1424,7 +1445,7 @@ body {
         font-size: 6px;
     }
 
-    .mobile-nav-item>i {
+    .mobile-nav-item > i {
         font-size: 11px;
         height: 19px;
         display: flex;
@@ -1455,4 +1476,148 @@ body {
         font-weight: 700;
     }
 
+    /* =====================================
+       MODAL
+    ===================================== */
+
+    .modal-box {
+        max-width: 300px;
+        padding: 27px 22px 22px;
+    }
+}
+
+/* =========================================
+   COMPUTADOR
+========================================= */
+
+@media (min-width: 577px) {
+    .principal-container {
+        min-height: 100vh;
+        padding: 0;
+        align-items: stretch;
+    }
+
+    .principal-card {
+        width: 100%;
+        max-width: none;
+        min-height: 100vh;
+        border-radius: 0;
+        box-shadow: none;
+        flex-direction: row;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .dashboard-main {
+        flex: 1;
+        padding: 35px 45px;
+        overflow-y: auto;
+    }
+
+    .summary-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+    }
+
+    .dashboard-navigation {
+        order: -1;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        width: 230px;
+        min-width: 230px;
+        height: auto;
+        min-height: 100vh;
+        margin-top: 0;
+        border-top: none;
+        background-color: #071650;
+        padding: 25px 0 20px;
+        gap: 4px;
+    }
+
+    .sidebar-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 0 25px 22px;
+        margin-bottom: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .sidebar-brand .logo-box {
+        width: 34px;
+        height: 34px;
+        font-size: 16px;
+    }
+
+    .sidebar-brand-name {
+        color: white;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    .dashboard-nav-item {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 12px;
+        height: auto;
+        padding: 13px 25px;
+        font-size: 12px;
+        color: #b8c0dd;
+    }
+
+    .dashboard-nav-item i {
+        font-size: 16px;
+    }
+
+    .dashboard-nav-item:hover {
+        color: white;
+        background-color: rgba(255, 255, 255, 0.06);
+    }
+
+    .dashboard-nav-item.active {
+        color: #f5c400;
+        background-color: rgba(245, 196, 0, 0.12);
+        border-right: 3px solid #f5c400;
+    }
+
+    .dashboard-nav-item.active i {
+        width: auto;
+        height: auto;
+        border-radius: 0;
+        background-color: transparent;
+        color: #f5c400;
+    }
+}
+
+/* =========================================
+   PANTALLAS MUY PEQUEÑAS
+========================================= */
+
+@media (max-width: 360px) {
+    .login-card {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .logo-container {
+        margin-bottom: 25px;
+    }
+
+    .welcome-section h2 {
+        font-size: 17px;
+    }
+
+    .principal-card {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .summary-card {
+        padding: 8px;
+    }
+
+    .quick-action {
+        font-size: 5.5px;
+    }
 }

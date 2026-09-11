@@ -1,170 +1,174 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Inventario - Xentra Inventory Pro</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-<link rel="stylesheet" href="css/estilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario - Xentra Inventory Pro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
+
 <body>
-<main class="principal-container">
-<div class="principal-card">
-<div class="dashboard-main inventory-main">
-<header class="inventory-header">
-<h1>Inventario</h1>
-<button type="button" class="inventory-add-button" title="Agregar producto" onclick="window.location.href='productos.html'">
-<i class="bi bi-plus-lg"></i>
-</button>
-</header>
-<div class="inventory-search">
-<i class="bi bi-search"></i>
-<input type="text" id="buscarProducto" placeholder="Buscar por nombre o código...">
-</div>
-<div class="inventory-filters">
-<button type="button" class="inventory-filter active" data-filter="todos">Todos</button>
-<button type="button" class="inventory-filter" data-filter="nombre">Nombre</button>
-<button type="button" class="inventory-filter" data-filter="codigo">Código</button>
-<button type="button" class="inventory-filter" data-filter="categoria">Categoría</button>
-</div>
-<section class="inventory-list" id="listaInventario">
-<article class="inventory-item">
-<div class="inventory-item-top">
-<div>
-<h2>Laptop Dell Vostro 3400</h2>
-<p>TEC-DEL-3400 • Tecnología</p>
-</div>
-<span class="stock-status normal">Normal</span>
-</div>
-<div class="inventory-item-bottom">
-<div>
-<span>Disponible</span>
-<strong>15 U</strong>
-</div>
-<div>
-<span>Mínimo</span>
-<strong>5 U</strong>
-</div>
-</div>
-</article>
-<article class="inventory-item low-stock">
-<div class="inventory-item-top">
-<div>
-<h2>Mouse Inalámbrico Logitech</h2>
-<p>ACC-LOG-M185 • Accesorios</p>
-</div>
-<span class="stock-status low">Stock bajo</span>
-</div>
-<div class="inventory-item-bottom">
-<div>
-<span>Disponible</span>
-<strong class="low-number">3 U</strong>
-</div>
-<div>
-<span>Mínimo</span>
-<strong>10 U</strong>
-</div>
-</div>
-</article>
-<article class="inventory-item">
-<div class="inventory-item-top">
-<div>
-<h2>Monitor LG Pro 27"</h2>
-<p>TEC-LG-27 • Tecnología</p>
-</div>
-<span class="stock-status normal">Normal</span>
-</div>
-<div class="inventory-item-bottom">
-<div>
-<span>Disponible</span>
-<strong>8 U</strong>
-</div>
-<div>
-<span>Mínimo</span>
-<strong>2 U</strong>
-</div>
-</div>
-</article>
-<article class="inventory-item low-stock">
-<div class="inventory-item-top">
-<div>
-<h2>Cable HDMI 4K 1.8m</h2>
-<p>CAB-HDM-18 • Accesorios</p>
-</div>
-<span class="stock-status low">Stock bajo</span>
-</div>
-<div class="inventory-item-bottom">
-<div>
-<span>Disponible</span>
-<strong class="low-number">1 U</strong>
-</div>
-<div>
-<span>Mínimo</span>
-<strong>15 U</strong>
-</div>
-</div>
-</article>
-</section>
-<div class="inventory-empty" id="inventarioVacio">
-<i class="bi bi-search"></i>
-<p>No se encontraron productos.</p>
-</div>
-</div>
-<nav class="dashboard-navigation">
-<div class="sidebar-brand">
-<div class="logo-box">
-<i class="bi bi-box-seam"></i>
-</div>
-<span class="sidebar-brand-name">Xentra</span>
-</div>
-<a href="principal.html" class="dashboard-nav-item">
-<i class="bi bi-house-fill"></i>
-<span>Inicio</span>
-</a>
-<a href="inventario.html" class="dashboard-nav-item active">
-<i class="bi bi-box-seam"></i>
-<span>Inventario</span>
-</a>
-<a href="movimientos.html" class="dashboard-nav-item">
-<i class="bi bi-arrow-down-up"></i>
-<span>Movimientos</span>
-</a>
-<a href="alertas.html" class="dashboard-nav-item">
-<i class="bi bi-bell"></i>
-<span>Alertas</span>
-</a>
-<a href="perfil.html" class="dashboard-nav-item">
-<i class="bi bi-person"></i>
-<span>Perfil</span>
-</a>
-</nav>
-<div class="mobile-dashboard-navigation">
-<a href="principal.html" class="mobile-nav-item">
-<i class="bi bi-house"></i>
-<span>Inicio</span>
-</a>
-<a href="inventario.html" class="mobile-nav-item active">
-<span class="mobile-nav-active-icon">
-<i class="bi bi-box-seam-fill"></i>
-</span>
-<span>Inventario</span>
-</a>
-<a href="movimientos.html" class="mobile-nav-item">
-<i class="bi bi-activity"></i>
-<span>Movimientos</span>
-</a>
-<a href="alertas.html" class="mobile-nav-item">
-<i class="bi bi-bell"></i>
-<span>Alertas</span>
-</a>
-<a href="perfil.html" class="mobile-nav-item">
-<i class="bi bi-person"></i>
-<span>Perfil</span>
-</a>
-</div>
-</div>
-</main>
-<script src="js/inventario.js"></script>
+    <main class="principal-container">
+        <div class="principal-card">
+            <div class="dashboard-main inventory-main">
+                <header class="inventory-header">
+                    <h1>Inventario</h1>
+                    <button type="button" class="inventory-add-button" title="Agregar producto"
+                        onclick="window.location.href='productos.html'">
+                        <i class="bi bi-plus-lg"></i>
+                    </button>
+                </header>
+                <div class="inventory-search">
+                    <i class="bi bi-search"></i>
+                    <input type="text" id="buscarProducto" placeholder="Buscar por nombre o código...">
+                </div>
+                <div class="inventory-filters">
+                    <button type="button" class="inventory-filter active" data-filter="todos">Todos</button>
+                    <button type="button" class="inventory-filter" data-filter="nombre">Nombre</button>
+                    <button type="button" class="inventory-filter" data-filter="codigo">Código</button>
+                    <button type="button" class="inventory-filter" data-filter="categoria">Categoría</button>
+                </div>
+                <section class="inventory-list" id="listaInventario">
+                    <article class="inventory-item" onclick="window.location.href='detalleProducto.html'">
+                        <div class="inventory-item-top">
+                            <div>
+                                <h2>Laptop Dell Vostro 3400</h2>
+                                <p>TEC-DEL-3400 • Tecnología</p>
+                            </div>
+                            <span class="stock-status normal">Normal</span>
+                        </div>
+                        <div class="inventory-item-bottom">
+                            <div>
+                                <span>Disponible</span>
+                                <strong>15 U</strong>
+                            </div>
+                            <div>
+                                <span>Mínimo</span>
+                                <strong>5 U</strong>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="inventory-item low-stock" onclick="window.location.href='detalleProducto.html'">
+                        <div class="inventory-item-top">
+                            <div>
+                                <h2>Mouse Inalámbrico Logitech</h2>
+                                <p>ACC-LOG-M185 • Accesorios</p>
+                            </div>
+                            <span class="stock-status low">Stock bajo</span>
+                        </div>
+                        <div class="inventory-item-bottom">
+                            <div>
+                                <span>Disponible</span>
+                                <strong class="low-number">3 U</strong>
+                            </div>
+                            <div>
+                                <span>Mínimo</span>
+                                <strong>10 U</strong>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="inventory-item" onclick="window.location.href='detalleProducto.html'">
+                        <div class="inventory-item-top">
+                            <div>
+                                <h2>Monitor LG Pro 27"</h2>
+                                <p>TEC-LG-27 • Tecnología</p>
+                            </div>
+                            <span class="stock-status normal">Normal</span>
+                        </div>
+                        <div class="inventory-item-bottom">
+                            <div>
+                                <span>Disponible</span>
+                                <strong>8 U</strong>
+                            </div>
+                            <div>
+                                <span>Mínimo</span>
+                                <strong>2 U</strong>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="inventory-item low-stock" onclick="window.location.href='detalleProducto.html'">
+                        <div class="inventory-item-top">
+                            <div>
+                                <h2>Cable HDMI 4K 1.8m</h2>
+                                <p>CAB-HDM-18 • Accesorios</p>
+                            </div>
+                            <span class="stock-status low">Stock bajo</span>
+                        </div>
+                        <div class="inventory-item-bottom">
+                            <div>
+                                <span>Disponible</span>
+                                <strong class="low-number">1 U</strong>
+                            </div>
+                            <div>
+                                <span>Mínimo</span>
+                                <strong>15 U</strong>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+                <div class="inventory-empty" id="inventarioVacio">
+                    <i class="bi bi-search"></i>
+                    <p>No se encontraron productos.</p>
+                </div>
+            </div>
+            <nav class="dashboard-navigation">
+                <div class="sidebar-brand">
+                    <div class="logo-box">
+                        <i class="bi bi-box-seam"></i>
+                    </div>
+                    <span class="sidebar-brand-name">Xentra</span>
+                </div>
+                <a href="principal.html" class="dashboard-nav-item">
+                    <i class="bi bi-house-fill"></i>
+                    <span>Inicio</span>
+                </a>
+                <a href="inventario.html" class="dashboard-nav-item active">
+                    <i class="bi bi-box-seam"></i>
+                    <span>Inventario</span>
+                </a>
+                <a href="movimientos.html" class="dashboard-nav-item">
+                    <i class="bi bi-arrow-down-up"></i>
+                    <span>Movimientos</span>
+                </a>
+                <a href="alertas.html" class="dashboard-nav-item">
+                    <i class="bi bi-bell"></i>
+                    <span>Alertas</span>
+                </a>
+                <a href="perfil.html" class="dashboard-nav-item">
+                    <i class="bi bi-person"></i>
+                    <span>Perfil</span>
+                </a>
+            </nav>
+            <div class="mobile-dashboard-navigation">
+                <a href="principal.html" class="mobile-nav-item">
+                    <i class="bi bi-house"></i>
+                    <span>Inicio</span>
+                </a>
+                <a href="inventario.html" class="mobile-nav-item active">
+                    <span class="mobile-nav-active-icon">
+                        <i class="bi bi-box-seam-fill"></i>
+                    </span>
+                    <span>Inventario</span>
+                </a>
+                <a href="movimientos.html" class="mobile-nav-item">
+                    <i class="bi bi-activity"></i>
+                    <span>Movimientos</span>
+                </a>
+                <a href="alertas.html" class="mobile-nav-item">
+                    <i class="bi bi-bell"></i>
+                    <span>Alertas</span>
+                </a>
+                <a href="perfil.html" class="mobile-nav-item">
+                    <i class="bi bi-person"></i>
+                    <span>Perfil</span>
+                </a>
+            </div>
+        </div>
+    </main>
+    <script src="js/inventario.js"></script>
 </body>
+
 </html>
