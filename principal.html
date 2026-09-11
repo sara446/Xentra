@@ -2,199 +2,531 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
     <title>Inicio - Xentra Inventory Pro</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- CSS propio -->
     <link rel="stylesheet" href="css/estilos.css">
+
 </head>
 
+
 <body>
+
     <!-- =========================================
-        CONTENEDOR PRINCIPAL
+         CONTENEDOR PRINCIPAL
     ========================================== -->
 
     <main class="principal-container">
+
         <!-- =====================================
              TARJETA PRINCIPAL
         ====================================== -->
+
         <div class="principal-card">
+
             <!-- =================================
-                 CONTENIDO PRINCIPAL DEL DASHBOARD
+                 CONTENIDO PRINCIPAL
             ================================== -->
+
             <div class="dashboard-main">
+
                 <!-- =============================
                      ENCABEZADO
                 ============================== -->
+
                 <header class="dashboard-header">
+
                     <!-- Información del usuario -->
+
                     <div class="user-info">
+
                         <div class="user-avatar">
                             HU
                         </div>
+
                         <div>
+
                             <h1>
                                 Hola, Usuario
                             </h1>
+
                             <p>
                                 Panel General • Xentra
                             </p>
+
                         </div>
+
                     </div>
+
+
                     <!-- Notificaciones -->
-                    <button type="button" class="notification-button" title="Notificaciones">
+
+                    <button
+                        type="button"
+                        class="notification-button"
+                        title="Notificaciones"
+                    >
+
                         <i class="bi bi-bell"></i>
+
                         <span class="notification-dot"></span>
+
                     </button>
+
                 </header>
-                <!-- =============================
+
+
+                <!-- =================================
                      ALERTA DE STOCK
-                ============================== -->
+                ================================== -->
+
                 <div class="stock-alert">
+
                     <div class="stock-alert-icon">
+
                         <i class="bi bi-exclamation-triangle"></i>
+
                     </div>
+
                     <p>
+
                         <strong>Alerta:</strong>
+
                         Hay 12 productos con stock bajo
                         el límite mínimo.
+
                     </p>
+
                 </div>
-                <!-- =============================
+
+
+                <!-- =================================
                      TARJETAS DE RESUMEN
-                ============================== -->
+                ================================== -->
+
                 <section class="summary-grid">
+
+
                     <!-- Total productos -->
+
                     <div class="summary-card">
+
                         <div class="summary-card-header">
+
                             <span>
                                 Total de
                                 productos
                             </span>
+
                             <i class="bi bi-box-seam"></i>
+
                         </div>
+
                         <strong class="summary-number">
                             248
                         </strong>
+
                     </div>
+
+
+                    <!-- Stock bajo -->
+
                     <div class="summary-card warning-card">
+
                         <div class="summary-card-header">
+
                             <span>
                                 Stock bajo
                             </span>
+
                             <i class="bi bi-arrow-down-circle-fill"></i>
+
                         </div>
+
                         <strong class="summary-number">
                             12
                         </strong>
+
                     </div>
+
+
                     <!-- Entradas -->
+
                     <div class="summary-card">
+
                         <div class="summary-card-header">
+
                             <span>
                                 Entradas
                                 recientes
                             </span>
+
                             <i class="bi bi-arrow-down"></i>
+
                         </div>
+
                         <strong class="summary-number">
                             36
                         </strong>
+
                     </div>
+
+
                     <!-- Salidas -->
+
                     <div class="summary-card">
+
                         <div class="summary-card-header">
+
                             <span>
                                 Salidas recientes
                             </span>
+
                             <i class="bi bi-arrow-up"></i>
+
                         </div>
+
                         <strong class="summary-number">
                             24
                         </strong>
+
                     </div>
+
                 </section>
-                <!-- =============================
+
+
+                <!-- =================================
                      ACCIONES RÁPIDAS
-                ============================== -->
+                ================================== -->
+
                 <section class="quick-actions-section">
+
                     <h2>
                         Acciones Rápidas
                     </h2>
+
+
                     <div class="quick-actions">
+
+
                         <!-- Nuevo producto -->
-                        <button type="button" class="quick-action" onclick="window.location.href='productos.html'">
+
+                        <button
+                            type="button"
+                            class="quick-action"
+                            onclick="window.location.href='productos.html'"
+                        >
+
                             <span class="quick-action-icon">
+
                                 <i class="bi bi-plus-lg"></i>
+
                             </span>
+
                             <span>
                                 Nuevo
                                 <br>
                                 producto
                             </span>
+
                         </button>
+
+
                         <!-- Registrar entrada -->
-                        <button type="button" class="quick-action" onclick="window.location.href='entradas.html'">
+
+                        <button
+                            type="button"
+                            class="quick-action"
+                            onclick="window.location.href='entradas.html'"
+                        >
+
                             <span class="quick-action-icon">
+
                                 <i class="bi bi-arrow-down-left"></i>
+
                             </span>
+
                             <span>
                                 Reg. Entrada
                             </span>
+
                         </button>
+
+
                         <!-- Registrar salida -->
-                        <button type="button" class="quick-action" onclick="window.location.href='salidas.html'">
+
+                        <button
+                            type="button"
+                            class="quick-action"
+                            onclick="window.location.href='salidas.html'"
+                        >
+
                             <span class="quick-action-icon">
+
                                 <i class="bi bi-arrow-up-right"></i>
+
                             </span>
+
                             <span>
                                 Reg. Salida
                             </span>
+
                         </button>
+
+
                         <!-- Inventario -->
-                        <button type="button" class="quick-action" onclick="window.location.href='inventario.html'">
+
+                        <button
+                            type="button"
+                            class="quick-action"
+                            onclick="window.location.href='inventario.html'"
+                        >
+
                             <span class="quick-action-icon">
+
                                 <i class="bi bi-search"></i>
+
                             </span>
+
                             <span>
                                 Inventario
                             </span>
+
                         </button>
+
+
                     </div>
+
                 </section>
-            </div> <!-- cierra dashboard-main -->
+
+            </div>
+
+
+            <!-- =========================================
+                 NAVEGACIÓN DE ESCRITORIO
+                 SE OCULTA EN CELULAR
+            ========================================== -->
+
             <nav class="dashboard-navigation">
+
+
+                <!-- Logo -->
+
                 <div class="sidebar-brand">
+
                     <div class="logo-box">
+
                         <i class="bi bi-box-seam"></i>
+
                     </div>
+
                     <span class="sidebar-brand-name">
                         Xentra
                     </span>
+
                 </div>
-                <a href="principal.html" class="dashboard-nav-item active">
+
+
+                <!-- Inicio -->
+
+                <a
+                    href="principal.html"
+                    class="dashboard-nav-item active"
+                >
+
                     <i class="bi bi-house-fill"></i>
-                    <span>Inicio</span>
+
+                    <span>
+                        Inicio
+                    </span>
+
                 </a>
-                <a href="inventario.html" class="dashboard-nav-item">
+
+
+                <!-- Inventario -->
+
+                <a
+                    href="inventario.html"
+                    class="dashboard-nav-item"
+                >
+
                     <i class="bi bi-box-seam"></i>
-                    <span>Inventario</span>
+
+                    <span>
+                        Inventario
+                    </span>
+
                 </a>
-                <a href="movimientos.html" class="dashboard-nav-item">
+
+
+                <!-- Movimientos -->
+
+                <a
+                    href="movimientos.html"
+                    class="dashboard-nav-item"
+                >
+
                     <i class="bi bi-arrow-down-up"></i>
-                    <span>Movimientos</span>
+
+                    <span>
+                        Movimientos
+                    </span>
+
                 </a>
-                <a href="alertas.html" class="dashboard-nav-item">
+
+
+                <!-- Alertas -->
+
+                <a
+                    href="alertas.html"
+                    class="dashboard-nav-item"
+                >
+
                     <i class="bi bi-bell"></i>
-                    <span>Alertas</span>
+
+                    <span>
+                        Alertas
+                    </span>
+
                 </a>
-                <a href="perfil.html" class="dashboard-nav-item">
+
+
+                <!-- Perfil -->
+
+                <a
+                    href="perfil.html"
+                    class="dashboard-nav-item"
+                >
+
                     <i class="bi bi-person"></i>
-                    <span>Perfil</span>
+
+                    <span>
+                        Perfil
+                    </span>
+
                 </a>
+
             </nav>
+
+
+            <!-- =========================================
+                 NAVEGACIÓN MÓVIL
+                 SE MUESTRA SOLO EN CELULAR
+            ========================================== -->
+
+            <div class="mobile-dashboard-navigation">
+
+
+                <!-- Inicio -->
+
+                <a
+                    href="principal.html"
+                    class="mobile-nav-item active"
+                >
+
+                    <span class="mobile-nav-active-icon">
+
+                        <i class="bi bi-house-fill"></i>
+
+                    </span>
+
+                    <span>
+                        Inicio
+                    </span>
+
+                </a>
+
+
+                <!-- Inventario -->
+
+                <a
+                    href="inventario.html"
+                    class="mobile-nav-item"
+                >
+
+                    <i class="bi bi-box-seam"></i>
+
+                    <span>
+                        Inventario
+                    </span>
+
+                </a>
+
+
+                <!-- Movimientos -->
+
+                <a
+                    href="movimientos.html"
+                    class="mobile-nav-item"
+                >
+
+                    <i class="bi bi-activity"></i>
+
+                    <span>
+                        Movimientos
+                    </span>
+
+                </a>
+
+
+                <!-- Alertas -->
+
+                <a
+                    href="alertas.html"
+                    class="mobile-nav-item"
+                >
+
+                    <i class="bi bi-bell"></i>
+
+                    <span>
+                        Alertas
+                    </span>
+
+                </a>
+
+
+                <!-- Perfil -->
+
+                <a
+                    href="perfil.html"
+                    class="mobile-nav-item"
+                >
+
+                    <i class="bi bi-person"></i>
+
+                    <span>
+                        Perfil
+                    </span>
+
+                </a>
+
+
+            </div>
+
         </div>
+
     </main>
+
 </body>
+
 </html>

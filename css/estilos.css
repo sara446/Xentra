@@ -12,6 +12,7 @@ body {
     background-color: #f4f6fa;
     color: #111b4d;
 }
+
 /* =========================================
    CONTENEDOR PRINCIPAL
 ========================================= */
@@ -1056,4 +1057,402 @@ body {
 
 .summary-card-header i {
     font-size: 20px;
+}
+
+.recovery-card {
+    min-height: 560px;
+}
+
+.recovery-card .registro-header {
+    margin-bottom: 35px;
+}
+
+.recovery-card .registro-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.recovery-card .registro-title p {
+    line-height: 1.5;
+}
+
+.recovery-card .registro-login {
+    margin-top: 25px;
+}
+
+/* =========================================
+   INVENTARIO
+========================================= */
+.inventory-main {
+    width: 100%;
+    padding: 32px 35px;
+}
+
+.inventory-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.inventory-header h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #111b4d;
+}
+
+.inventory-add-button {
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: 6px;
+    background-color: #071650;
+    color: #f5c400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.inventory-add-button:hover {
+    background-color: #0b216e;
+}
+
+.inventory-search {
+    height: 42px;
+    border: 1px solid #e3e3e3;
+    border-radius: 7px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    margin-bottom: 12px;
+}
+
+.inventory-search i {
+    font-size: 12px;
+    color: #7c8496;
+    margin-right: 8px;
+}
+
+.inventory-search input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 10px;
+    color: #333;
+    background: transparent;
+}
+
+.inventory-search input::placeholder {
+    color: #9a9a9a;
+}
+
+.inventory-filters {
+    display: flex;
+    gap: 7px;
+    margin-bottom: 12px;
+}
+
+.inventory-filter {
+    min-width: 48px;
+    height: 25px;
+    padding: 0 9px;
+    border: 1px solid #e3e3e3;
+    border-radius: 12px;
+    background-color: #f7f8fa;
+    color: #7c8496;
+    font-size: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.inventory-filter.active {
+    background-color: #071650;
+    border-color: #071650;
+    color: white;
+}
+
+.inventory-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.inventory-item {
+    background-color: white;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    padding: 10px 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.inventory-item.low-stock {
+    border-color: #ead68a;
+    background-color: #fffdf5;
+}
+
+.inventory-item-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.inventory-item h2 {
+    margin: 0 0 2px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #111b4d;
+}
+
+.inventory-item p {
+    margin: 0;
+    font-size: 8px;
+    color: #8a8a8a;
+}
+
+.stock-status {
+    white-space: nowrap;
+    padding: 3px 7px;
+    border-radius: 10px;
+    font-size: 7px;
+    font-weight: 700;
+}
+
+.stock-status.normal {
+    background-color: #edf7ef;
+    color: #4b8a59;
+}
+
+.stock-status.low {
+    background-color: #fff4cf;
+    color: #a87b00;
+    border: 1px solid #e8ca69;
+}
+
+.inventory-item-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.inventory-item-bottom div {
+    display: flex;
+    flex-direction: column;
+}
+
+.inventory-item-bottom div:last-child {
+    text-align: right;
+}
+
+.inventory-item-bottom span {
+    font-size: 7px;
+    color: #9a9a9a;
+    margin-bottom: 2px;
+}
+
+.inventory-item-bottom strong {
+    font-size: 10px;
+    color: #111b4d;
+}
+
+.inventory-item-bottom .low-number {
+    color: #dc3545;
+}
+
+.inventory-empty {
+    display: none;
+    text-align: center;
+    padding: 35px 15px;
+    color: #858585;
+}
+
+.inventory-empty.show {
+    display: block;
+}
+
+.inventory-empty i {
+    font-size: 25px;
+    color: #aeb4c2;
+}
+
+.inventory-empty p {
+    margin: 8px 0 0;
+    font-size: 10px;
+}
+
+/* =========================================
+   NAVEGACIÓN INFERIOR DEL DASHBOARD
+========================================= */
+.mobile-dashboard-navigation {
+    display: none;
+}
+
+/* =========================================
+   INVENTARIO RESPONSIVE
+========================================= */
+@media(max-width:576px) {
+
+    .principal-container {
+        min-height: 100vh;
+        padding: 0;
+    }
+
+    .principal-card {
+        width: 100%;
+        min-height: 100vh;
+        border-radius: 0;
+        box-shadow: none;
+        position: relative;
+        padding-bottom: 76px;
+    }
+
+    .dashboard-main {
+        width: 100%;
+    }
+
+    .dashboard-navigation {
+        display: none;
+    }
+
+    .inventory-header {
+        margin-bottom: 10px;
+    }
+
+    .inventory-header h1 {
+        font-size: 16px;
+    }
+
+    .inventory-add-button {
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        font-size: 9px;
+    }
+
+    .inventory-search {
+        height: 34px;
+        padding: 0 10px;
+        margin-bottom: 8px;
+    }
+
+    .inventory-search i {
+        font-size: 9px;
+        margin-right: 7px;
+    }
+
+    .inventory-search input {
+        font-size: 8px;
+    }
+
+    .inventory-filters {
+        gap: 5px;
+        margin-bottom: 8px;
+    }
+
+    .inventory-filter {
+        min-width: 38px;
+        height: 20px;
+        padding: 0 7px;
+        font-size: 6px;
+    }
+
+    .inventory-list {
+        gap: 6px;
+    }
+
+    .inventory-item {
+        padding: 8px 9px;
+        border-radius: 7px;
+    }
+
+    .inventory-item-top {
+        margin-bottom: 7px;
+    }
+
+    .inventory-item h2 {
+        font-size: 9px;
+        margin-bottom: 1px;
+    }
+
+    .inventory-item p {
+        font-size: 6px;
+    }
+
+    .stock-status {
+        padding: 2px 6px;
+        font-size: 6px;
+    }
+
+    .inventory-item-bottom span {
+        font-size: 6px;
+    }
+
+    .inventory-item-bottom strong {
+        font-size: 9px;
+    }
+
+    .mobile-dashboard-navigation {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 62px;
+        background-color: white;
+        border-top: 1px solid #e9e9e9;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 5px 8px 4px;
+        z-index: 1000;
+    }
+
+    .mobile-nav-item {
+        min-width: 48px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        color: #6f7788;
+        text-decoration: none;
+        font-size: 6px;
+    }
+
+    .mobile-nav-item>i {
+        font-size: 11px;
+        height: 19px;
+        display: flex;
+        align-items: center;
+    }
+
+    .mobile-nav-item span:last-child {
+        line-height: 1;
+    }
+
+    .mobile-nav-active-icon {
+        width: 32px;
+        height: 17px;
+        border-radius: 10px;
+        background-color: #f5c400;
+        color: #071650;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-nav-active-icon i {
+        font-size: 10px;
+    }
+
+    .mobile-nav-item.active {
+        color: #071650;
+        font-weight: 700;
+    }
+
 }
