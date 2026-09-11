@@ -1,10 +1,10 @@
-
 /* =========================================
    CONFIGURACIÓN GENERAL
 ========================================= */
 * {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -12,6 +12,7 @@ body {
     background-color: #f4f6fa;
     color: #111b4d;
 }
+
 /* =========================================
    CONTENEDORES PRINCIPALES
 ========================================= */
@@ -38,9 +39,11 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 .login-card {
     padding: 45px 35px 20px;
 }
+
 .principal-card {
     padding: 25px 20px 0;
 }
@@ -52,6 +55,7 @@ body {
     text-align: center;
     margin-bottom: 35px;
 }
+
 .logo-box {
     width: 48px;
     height: 48px;
@@ -65,12 +69,14 @@ body {
     color: #f5c400;
     font-size: 23px;
 }
+
 .brand-name {
     margin: 0;
     font-size: 20px;
     font-weight: 700;
     color: #071650;
 }
+
 .brand-subtitle {
     display: block;
     font-size: 7px;
@@ -86,12 +92,14 @@ body {
     text-align: center;
     margin-bottom: 25px;
 }
+
 .welcome-section h2 {
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 7px;
     color: #111b4d;
 }
+
 .welcome-section p {
     font-size: 11px;
     color: #858585;
@@ -104,12 +112,14 @@ body {
 .form-group {
     margin-bottom: 17px;
 }
+
 .form-group label {
     display: block;
     font-size: 10px;
     color: #777;
     margin-bottom: 6px;
 }
+
 .form-control {
     width: 100%;
     height: 40px;
@@ -120,6 +130,7 @@ body {
     color: #333;
     outline: none;
 }
+
 .form-control:focus {
     border-color: #071650;
     box-shadow: 0 0 0 2px rgba(7, 22, 80, 0.08);
@@ -128,7 +139,6 @@ body {
 /* =========================================
    CONTRASEÑA
 ========================================= */
-
 .password-container,
 .select-container {
     position: relative;
@@ -172,7 +182,6 @@ body {
 /* =========================================
    ENLACES
 ========================================= */
-
 .forgot-container {
     text-align: right;
     margin-top: -5px;
@@ -211,7 +220,6 @@ body {
 /* =========================================
    BOTONES GENERALES
 ========================================= */
-
 .btn-login,
 .modal-button,
 .product-primary-button {
@@ -243,7 +251,6 @@ body {
 /* =========================================
    REGISTRO
 ========================================= */
-
 .registro-card {
     min-height: 650px;
 }
@@ -320,7 +327,6 @@ body {
 /* =========================================
    RECUPERACIÓN
 ========================================= */
-
 .recovery-card {
     min-height: 560px;
 }
@@ -345,7 +351,6 @@ body {
 /* =========================================
    MODAL
 ========================================= */
-
 .modal-overlay {
     position: fixed;
     inset: 0;
@@ -379,6 +384,7 @@ body {
         opacity: 0;
         transform: scale(0.9);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
@@ -422,10 +428,15 @@ body {
     color: #dc3545;
 }
 
+.modal-summary-card {
+    text-align: left;
+    margin: 0 0 20px;
+    padding: 12px 15px;
+}
+
 /* =========================================
    DASHBOARD
 ========================================= */
-
 .dashboard-header {
     display: flex;
     align-items: center;
@@ -468,7 +479,6 @@ body {
 /* =========================================
    NOTIFICACIONES
 ========================================= */
-
 .notification-button {
     position: relative;
     width: 30px;
@@ -498,7 +508,6 @@ body {
 /* =========================================
    ALERTAS DE STOCK
 ========================================= */
-
 .stock-alert,
 .product-stock-alert {
     width: 100%;
@@ -541,7 +550,6 @@ body {
 /* =========================================
    TARJETAS DE RESUMEN
 ========================================= */
-
 .summary-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -602,7 +610,6 @@ body {
 /* =========================================
    ACCIONES RÁPIDAS
 ========================================= */
-
 .quick-actions-section {
     margin-bottom: 15px;
 }
@@ -660,7 +667,6 @@ body {
 /* =========================================
    NAVEGACIÓN
 ========================================= */
-
 .dashboard-navigation {
     margin-top: auto;
     min-height: 55px;
@@ -714,7 +720,6 @@ body {
 /* =========================================
    INVENTARIO
 ========================================= */
-
 .inventory-main {
     width: 100%;
     padding: 32px 35px;
@@ -867,6 +872,23 @@ body {
     border: 1px solid #e8ca69;
 }
 
+.stock-status.in,
+.stock-status.out {
+    border: 1px solid transparent;
+}
+
+.stock-status.in {
+    background-color: #edf7ef;
+    border-color: #a9dcb8;
+    color: #1a8f4c;
+}
+
+.stock-status.out {
+    background-color: #fdecec;
+    border-color: #f1b3ba;
+    color: #dc3545;
+}
+
 .inventory-item-bottom {
     display: flex;
     justify-content: space-between;
@@ -919,9 +941,56 @@ body {
 }
 
 /* =========================================
+   MOVIMIENTOS
+========================================= */
+.movements-date-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 26px;
+    padding: 0 10px;
+    border: 1px solid #e3e3e3;
+    border-radius: 14px;
+    background-color: #f7f8fa;
+    color: #555;
+    font-size: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.movement-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.movement-meta span {
+    font-size: 8px;
+    color: #9a9a9a;
+}
+
+.movement-quantity {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.movement-quantity.in {
+    color: #1a8f4c;
+}
+
+.movement-quantity.out {
+    color: #dc3545;
+}
+
+.movements-register-button {
+    margin-top: 14px;
+}
+
+/* =========================================
    DETALLE DEL PRODUCTO
 ========================================= */
-
 .product-detail-main {
     width: 100%;
     padding: 32px 35px;
@@ -1004,7 +1073,7 @@ body {
     align-items: flex-end;
 }
 
-.product-stock-section > div {
+.product-stock-section>div {
     display: flex;
     flex-direction: column;
 }
@@ -1112,9 +1181,53 @@ body {
 }
 
 /* =========================================
+   FORMULARIO DE PRODUCTO
+========================================= */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 17px;
+}
+
+.form-row .form-group {
+    margin-bottom: 0;
+}
+
+.product-detail-card .btn-login {
+    margin-top: 4px;
+}
+
+.movement-type-button {
+    height: 40px;
+    border: 1px solid #e3e3e3;
+    border-radius: 7px;
+    background-color: white;
+    color: #555;
+    font-size: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.movement-type-button.selected.in {
+    border-color: #1a8f4c;
+    background-color: #edf7ef;
+    color: #1a8f4c;
+}
+
+.movement-type-button.selected.out {
+    border-color: #dc3545;
+    background-color: #fdecec;
+    color: #dc3545;
+}
+
+/* =========================================
    NAVEGACIÓN MÓVIL
 ========================================= */
-
 .bottom-navigation,
 .mobile-dashboard-navigation {
     display: none;
@@ -1123,7 +1236,6 @@ body {
 /* =========================================
    RESPONSIVE - CELULAR
 ========================================= */
-
 @media (max-width: 576px) {
     body {
         background-color: #f4f6fa;
@@ -1218,7 +1330,7 @@ body {
     }
 
     /* =====================================
-       INVENTARIO
+       INVENTARIO / MOVIMIENTOS
     ===================================== */
 
     .dashboard-navigation {
@@ -1300,6 +1412,25 @@ body {
 
     .inventory-item-bottom strong {
         font-size: 9px;
+    }
+
+    .movement-meta span {
+        font-size: 6px;
+    }
+
+    .movement-quantity {
+        font-size: 9px;
+    }
+
+    .movements-date-button {
+        font-size: 7px;
+        height: 22px;
+        padding: 0 8px;
+    }
+
+    .movement-type-button {
+        height: 34px;
+        font-size: 8px;
     }
 
     /* =====================================
@@ -1445,7 +1576,7 @@ body {
         font-size: 6px;
     }
 
-    .mobile-nav-item > i {
+    .mobile-nav-item>i {
         font-size: 11px;
         height: 19px;
         display: flex;
@@ -1489,7 +1620,6 @@ body {
 /* =========================================
    COMPUTADOR
 ========================================= */
-
 @media (min-width: 577px) {
     .principal-container {
         min-height: 100vh;
@@ -1593,7 +1723,6 @@ body {
 /* =========================================
    PANTALLAS MUY PEQUEÑAS
 ========================================= */
-
 @media (max-width: 360px) {
     .login-card {
         padding-left: 20px;
