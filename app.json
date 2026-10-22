@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "Xentra",
+    "slug": "xentra",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": false
+    },
+    "android": {
+      "package": "com.xentra.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/images/icon.png",
+        "backgroundColor": "#0B1B4B"
+      }
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Xentra necesita acceso a tus fotos para agregar imágenes a los productos."
+        }
+      ],
+      "expo-status-bar",
+      "expo-font"
+    ],
+    "icon": "./src/assets/images/icon.png",
+    "web": {
+      "favicon": "./src/assets/images/icon.png"
+    }
+  }
+}
