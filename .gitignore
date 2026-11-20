@@ -1,0 +1,18 @@
+# ---------- App (React Native / Expo) ----------
+node_modules/
+.expo/
+.env
+*.log
+.DS_Store
+
+# ---------- Backend (Kotlin / Ktor / Gradle) ----------
+.gradle/
+.kotlin/
+build/
+out/
+.idea/
+*.iml
+
+# Clave privada de Firebase (Admin SDK): NUNCA subirla
+serviceAccountKey.json
+*firebase-adminsdk*.json
